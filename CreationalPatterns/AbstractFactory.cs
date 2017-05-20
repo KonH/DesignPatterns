@@ -4,8 +4,6 @@ namespace DesignPatterns.CreationalPatterns {
 
 	class AbstractFactoryPattern : Pattern {
 
-		public AbstractFactoryPattern() : base("AbstractFactory") { }
-
 		public override void Test() {
 			TestFactory(new SimpleLoggerFactory());
 			TestFactory(new ExtendedLoggerFactory());
@@ -14,11 +12,7 @@ namespace DesignPatterns.CreationalPatterns {
 
 		void TestFactory(LoggerFactory loggerFactory) {
 			var logger = loggerFactory.Create();
-			logger.WriteLine($"{GetShortName(loggerFactory)} create {GetShortName(logger)}");
-		}
-
-		string GetShortName<T>(T obj) {
-			return obj.GetType().Name.ToString();
+			logger.WriteLine($"{Utils.ShortName(loggerFactory)} create {Utils.ShortName(logger)}");
 		}
 
 		abstract class LoggerFactory {
