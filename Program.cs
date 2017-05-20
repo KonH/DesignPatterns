@@ -1,9 +1,16 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using DesignPatterns.CreationalPatterns;
 
-namespace ConsoleApplication {
+namespace DesignPatterns {
+
 	public class Program {
+
 		public static void Main(string[] args) {
-			Console.WriteLine("Hello World!");
+			var items = new List<Pattern> {
+				new AbstractFactoryPattern()
+			};
+			var selection = new Selection(items);
+			selection.Process();
 		}
 	}
 }
