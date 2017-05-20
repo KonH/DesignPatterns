@@ -13,6 +13,7 @@ namespace DesignPatterns {
 				new AbstractFactory(),
 				new Builder(),
 				new FactoryMethod(),
+				new Prototype(),
 				new Singleton(),
 				new Decorator()
 			};
