@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DesignPatterns.BehavioralPatterns;
 using DesignPatterns.CreationalPatterns;
 using DesignPatterns.StructuralPatterns;
 
@@ -8,7 +9,8 @@ namespace DesignPatterns {
 
 		public static void Main(string[] args) {
 			var items = new List<Pattern> {
-				new AbstractFactoryPattern(),
+				new TemplateMethod(),
+				new AbstractFactory(),
 				new Decorator()
 			};
 			var selection = new Selection(items);

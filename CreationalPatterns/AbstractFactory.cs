@@ -2,7 +2,7 @@
 
 namespace DesignPatterns.CreationalPatterns {
 
-	class AbstractFactoryPattern : Pattern {
+	class AbstractFactory : Pattern {
 
 		public override void Test() {
 			TestFactory(new SimpleLoggerFactory());
