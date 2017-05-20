@@ -11,6 +11,7 @@ namespace DesignPatterns {
 			var items = new List<Pattern> {
 				new TemplateMethod(),
 				new AbstractFactory(),
+				new Singleton(),
 				new Decorator()
 			};
 			var selection = new Selection(items);

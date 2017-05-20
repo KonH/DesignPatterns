@@ -3,3 +3,4 @@ backup/
 .vs/
 .vscode/
 bin/
+*.sln
