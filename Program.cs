@@ -11,6 +11,7 @@ namespace DesignPatterns {
 			var items = new List<Pattern> {
 				new TemplateMethod(),
 				new AbstractFactory(),
+				new FactoryMethod(),
 				new Singleton(),
 				new Decorator()
 			};
