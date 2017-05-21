@@ -15,7 +15,8 @@ namespace DesignPatterns {
 				new FactoryMethod(),
 				new Prototype(),
 				new Singleton(),
-				new Decorator()
+				new Decorator(),
+				new Facade()
 			};
 			var selection = new Selection(items);
 			selection.Process();
