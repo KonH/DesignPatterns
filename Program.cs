@@ -16,6 +16,7 @@ namespace DesignPatterns {
 				new Prototype(),
 				new Singleton(),
 				new Bridge(),
+				new Composite(),
 				new Decorator(),
 				new Facade()
 			};
