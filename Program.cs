@@ -15,6 +15,7 @@ namespace DesignPatterns {
 				new FactoryMethod(),
 				new Prototype(),
 				new Singleton(),
+				new Bridge(),
 				new Decorator(),
 				new Facade()
 			};
