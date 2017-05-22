@@ -19,6 +19,7 @@ namespace DesignPatterns {
 				new Composite(),
 				new Decorator(),
 				new Facade(),
+				new Flyweight(),
 				new Proxy()
 			};
 			var selection = new Selection(items);
