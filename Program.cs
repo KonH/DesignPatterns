@@ -18,7 +18,8 @@ namespace DesignPatterns {
 				new Bridge(),
 				new Composite(),
 				new Decorator(),
-				new Facade()
+				new Facade(),
+				new Proxy()
 			};
 			var selection = new Selection(items);
 			selection.Process();
