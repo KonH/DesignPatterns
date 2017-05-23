@@ -10,6 +10,7 @@ namespace DesignPatterns {
 		public static void Main(string[] args) {
 			var items = new List<Pattern> {
 				new TemplateMethod(),
+				new Visitor(),
 				new AbstractFactory(),
 				new Builder(),
 				new FactoryMethod(),
