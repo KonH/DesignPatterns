@@ -1,10 +1,10 @@
 ﻿using System;
 
 namespace DesignPatterns.StructuralPatterns {
-	class Facade : Pattern {
+	class FacadePattern : Pattern {
 
 		public override void Test() {
-			var facade = new FacadeExample();
+			var facade = new Facade();
 			facade.LogWithTime("Test");
 		}
 
@@ -24,7 +24,7 @@ namespace DesignPatterns.StructuralPatterns {
 			}
 		}
 
-		class FacadeExample {
+		class Facade {
 
 			TimeSubsystem _time = new TimeSubsystem();
 			LogSubsystem  _log  = new LogSubsystem();

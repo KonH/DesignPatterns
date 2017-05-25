@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace DesignPatterns.CreationalPatterns {
-	class Builder : Pattern {
+	class BuilderPattern : Pattern {
 
 		public override void Test() {
 			var director = new Director();
@@ -10,21 +10,21 @@ namespace DesignPatterns.CreationalPatterns {
 			TestBuilder(director, new StringStorageBuilder());
 		}
 
-		void TestBuilder(Director director, BuilderExample builder) {
+		void TestBuilder(Director director, Builder builder) {
 			director.Construct(builder);
 			Console.WriteLine(builder.GetStorage().Aggregation);
 		}
 
 		class Director {
 
-			public void Construct(BuilderExample builder) {
+			public void Construct(Builder builder) {
 				builder.CreateStorage();
 				builder.FillStorage();
 				builder.CalculateStorage();
 			}
 		}
 
-		abstract class BuilderExample {
+		abstract class Builder {
 
 			public abstract void CreateStorage();
 			public abstract void FillStorage();
@@ -32,7 +32,7 @@ namespace DesignPatterns.CreationalPatterns {
 			public abstract Storage GetStorage();
 		}
 
-		class IntStorageBuilder : BuilderExample {
+		class IntStorageBuilder : Builder {
 
 			IntStorage _storage = null;
 
@@ -53,7 +53,7 @@ namespace DesignPatterns.CreationalPatterns {
 			}
 		}
 
-		class StringStorageBuilder : BuilderExample {
+		class StringStorageBuilder : Builder {
 
 			StringStorage _storage = null;
 

@@ -1,10 +1,10 @@
 ﻿using System;
 
 namespace DesignPatterns.StructuralPatterns {
-	class Adapter : Pattern {
+	class AdapterPattern : Pattern {
 
 		public override void Test() {
-			Target target = new AdapterExample();
+			Target target = new Adapter();
 			target.PrintValue(42);
 		}
 
@@ -15,7 +15,7 @@ namespace DesignPatterns.StructuralPatterns {
 			}
 		}
 
-		class AdapterExample : Target {
+		class Adapter : Target {
 
 			Adaptee _adaptee = new Adaptee();
 

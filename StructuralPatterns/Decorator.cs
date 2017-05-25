@@ -2,7 +2,7 @@
 
 namespace DesignPatterns.StructuralPatterns {
 
-	class Decorator : Pattern {
+	class DecoratorPattern : Pattern {
 
 		public override void Test() {
 			TestItem(new TextWriter());

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DesignPatterns.BehavioralPatterns {
 
-	class TemplateMethod : Pattern {
+	class TemplateMethodPattern : Pattern {
 
 		public override void Test() {
 			TestItem(new IntWritter());

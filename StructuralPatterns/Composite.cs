@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace DesignPatterns.StructuralPatterns {
-	class Composite : Pattern {
+	class CompositePattern : Pattern {
 
 		public override void Test() {
 			

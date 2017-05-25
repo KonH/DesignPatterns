@@ -1,10 +1,10 @@
 ﻿using System;
 
 namespace DesignPatterns.StructuralPatterns {
-	class Bridge : Pattern {
+	class BridgePattern : Pattern {
 
 		public override void Test() {
-			var bridge = new BridgeExample();
+			var bridge = new Bridge();
 
 			bridge.Implementor = new ImplementorA();
 			bridge.Method();
@@ -13,7 +13,7 @@ namespace DesignPatterns.StructuralPatterns {
 			bridge.Method();
 		}
 
-		class BridgeExample {
+		class Bridge {
 
 			public Implementor Implementor { get; set; }
 

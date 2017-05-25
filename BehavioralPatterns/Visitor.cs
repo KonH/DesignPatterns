@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace DesignPatterns.BehavioralPatterns {
-	class Visitor : Pattern {
+	class VisitorPattern : Pattern {
 
 		public override void Test() {
 			var elements = new IElement[] { new IntElement(100), new StringElement("test") };

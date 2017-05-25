@@ -9,22 +9,22 @@ namespace DesignPatterns {
 
 		public static void Main(string[] args) {
 			var items = new List<Pattern> {
-				new Iterator(),
-				new Memento(),
-				new TemplateMethod(),
-				new Visitor(),
-				new AbstractFactory(),
-				new Builder(),
-				new FactoryMethod(),
-				new Prototype(),
-				new Singleton(),
-				new Adapter(),
-				new Bridge(),
-				new Composite(),
-				new Decorator(),
-				new Facade(),
-				new Flyweight(),
-				new Proxy()
+				new IteratorPattern(),
+				new MementoPattern(),
+				new TemplateMethodPattern(),
+				new VisitorPattern(),
+				new AbstractFactoryPattern(),
+				new BuilderPattern(),
+				new FactoryMethodPattern(),
+				new PrototypePattern(),
+				new SingletonPattern(),
+				new AdapterPattern(),
+				new BridgePattern(),
+				new CompositePattern(),
+				new DecoratorPattern(),
+				new FacadePattern(),
+				new FlyweightPattern(),
+				new ProxyPattern()
 			};
 			var selection = new Selection(items);
 			selection.Process();

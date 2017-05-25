@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DesignPatterns.BehavioralPatterns
 {
-    class Iterator:Pattern
+    class IteratorPattern:Pattern
     {
 		public override void Test() {
 			var aggregate = new ListAggregate();
@@ -19,7 +19,7 @@ namespace DesignPatterns.BehavioralPatterns
 		}
 
 		interface IAggregate {
-			IIteratorExample CreateIterator();
+			IIterator CreateIterator();
 			int Count { get; }
 			object this[int index] { get; set; }
 		}
@@ -28,7 +28,7 @@ namespace DesignPatterns.BehavioralPatterns
 
 			List<int> _items = new List<int>();
 
-			public IIteratorExample CreateIterator() {
+			public IIterator CreateIterator() {
 				return new ConcreteIterator(this);
 			}
 
@@ -43,14 +43,14 @@ namespace DesignPatterns.BehavioralPatterns
 			}
 		}
 
-		interface IIteratorExample {
+		interface IIterator {
 			object First();
 			object Next();
 			bool IsDone();
 			object Current();
 		}
 
-		class ConcreteIterator : IIteratorExample {
+		class ConcreteIterator : IIterator {
 
 			IAggregate _aggregate;
 			int _current;

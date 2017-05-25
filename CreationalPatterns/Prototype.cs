@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace DesignPatterns.CreationalPatterns {
-	class Prototype : Pattern {
+	class PrototypePattern : Pattern {
 
 		public override void Test() {
 			var proto = new ConcreteItem("Item");
@@ -10,21 +10,21 @@ namespace DesignPatterns.CreationalPatterns {
 			Console.WriteLine(clone1 == clone2);
 		}
 
-		abstract class PrototypeExample {
+		abstract class Prototype {
 
 			public string Name { get; private set; }
 
-			public PrototypeExample(string name) {
+			public Prototype(string name) {
 				Name = name;
 				Console.WriteLine("Prototype created");
 			}
 			
-			public virtual PrototypeExample Clone() {
-				return (PrototypeExample)MemberwiseClone();
+			public virtual Prototype Clone() {
+				return (Prototype)MemberwiseClone();
 			}
 		}
 
-		class ConcreteItem : PrototypeExample {
+		class ConcreteItem : Prototype {
 
 			public ConcreteItem(string name) : base(name) {}
 		}

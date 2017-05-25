@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace DesignPatterns.CreationalPatterns {
-	class FactoryMethod : Pattern {
+	class FactoryMethodPattern : Pattern {
 
 		public override void Test() {
 			TestCreator(new TestItemACreator());

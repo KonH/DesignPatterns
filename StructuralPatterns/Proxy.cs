@@ -2,7 +2,7 @@
 
 namespace DesignPatterns.StructuralPatterns {
 
-	class Proxy : Pattern {
+	class ProxyPattern : Pattern {
 
 		public override void Test() {
 			var summer = new RealSummer();

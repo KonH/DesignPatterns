@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace DesignPatterns.StructuralPatterns {
-	class Flyweight : Pattern {
+	class FlyweightPattern : Pattern {
 
 		public override void Test() {
 			var factory = new FlyweightFactory();
@@ -22,10 +22,10 @@ namespace DesignPatterns.StructuralPatterns {
 
 		class FlyweightFactory {
 
-			Dictionary<string, IFlyweightObject> _pool = new Dictionary<string, IFlyweightObject>();
+			Dictionary<string, IFlyweight> _pool = new Dictionary<string, IFlyweight>();
 
-			public IFlyweightObject GetObject(string param) {
-				IFlyweightObject obj = null;
+			public IFlyweight GetObject(string param) {
+				IFlyweight obj = null;
 				if( !_pool.TryGetValue(param, out obj) ) {
 					obj = CreateObject(param);
 					_pool[param] = obj;
@@ -33,7 +33,7 @@ namespace DesignPatterns.StructuralPatterns {
 				return obj;
 			}
 
-			IFlyweightObject CreateObject(string param) {
+			IFlyweight CreateObject(string param) {
 				int value = 0;
 				if ( int.TryParse(param, out value) ) {
 					return new ConcreteIntFlyweight(value);
@@ -42,12 +42,12 @@ namespace DesignPatterns.StructuralPatterns {
 			}
 		}
 
-		interface IFlyweightObject {
+		interface IFlyweight {
 
 			string GetValue();
 		}
 
-		class ConcreteIntFlyweight : IFlyweightObject {
+		class ConcreteIntFlyweight : IFlyweight {
 
 			int _value = 0;
 			string _strValue = null;
@@ -65,7 +65,7 @@ namespace DesignPatterns.StructuralPatterns {
 			}
 		}
 
-		class ConcreteStringFlyweight : IFlyweightObject {
+		class ConcreteStringFlyweight : IFlyweight {
 
 			string _value = null;
 

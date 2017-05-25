@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace DesignPatterns.BehavioralPatterns {
-	class Memento : Pattern {
+	class MementoPattern : Pattern {
 
 		public override void Test() {
 			var originator = new Originator(10);
