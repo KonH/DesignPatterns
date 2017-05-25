@@ -11,6 +11,7 @@ namespace DesignPatterns {
 			var items = new List<Pattern> {
 				new IteratorPattern(),
 				new MementoPattern(),
+				new StrategyPattern(),
 				new TemplateMethodPattern(),
 				new VisitorPattern(),
 				new AbstractFactoryPattern(),
