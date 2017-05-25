@@ -13,6 +13,7 @@ namespace DesignPatterns {
 				new IteratorPattern(),
 				new MediatorPattern(),
 				new MementoPattern(),
+				new ObserverPattern(),
 				new StrategyPattern(),
 				new TemplateMethodPattern(),
 				new VisitorPattern(),
