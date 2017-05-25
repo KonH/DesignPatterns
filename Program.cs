@@ -9,6 +9,7 @@ namespace DesignPatterns {
 
 		public static void Main(string[] args) {
 			var items = new List<Pattern> {
+				new CommandPattern(),
 				new IteratorPattern(),
 				new MementoPattern(),
 				new StrategyPattern(),
