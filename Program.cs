@@ -15,6 +15,7 @@ namespace DesignPatterns {
 				new MediatorPattern(),
 				new MementoPattern(),
 				new ObserverPattern(),
+				new StatePattern(),
 				new StrategyPattern(),
 				new TemplateMethodPattern(),
 				new VisitorPattern(),
